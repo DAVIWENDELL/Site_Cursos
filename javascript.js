@@ -89,14 +89,14 @@ function checkIfInputIsNull(event) {
         </div>
             <div class="col-6 offset-6 col-sm-9 offset-sm-6 col-md-4 offset-md-8 col-lg-3 
             offset-lg-0 col-xl-2 align-self-center mt-3">
-            <div class="input-group"> 
+            <dvi class="input-group"> 
       
             <input type="number" class="form-control text-center border-dark" value="1">
   
             <button type="button" class="btn btn-outline-danger border-dark btn-sm">
                 Remover
             </button>
-        </div>
+        </dvi>
         <div class="text-right mt-2">
             <small class="text-secondary">${productDesconto}</small><br>
             <span class="text-dark">${productPreco}</span>
@@ -106,13 +106,9 @@ function checkIfInputIsNull(event) {
     
     `
 //ERRO AQUI
-    // var tableBody = document.querySelector(".carrinho ul");
-    const tableBody = document.querySelector("#navbarSupportedContent")
-    tableBody.append(newCartProduct)
-    // console.log("tableBody:", tableBody);
-    // var tableBody = document.getElementById("navbarSupportedContent");
-    console.log(tableBody);
-
+    //const tableBody = productInfos.getElementsByClassName("box")
+    const tableBody = document.querySelector(".carrinho ul")
+    tableBody.append(newCartProduct);
     
     updateTotal()
     newCartProduct.getElementsByClassName("form-control text-center border-dark")[0].addEventListener("change", checkIfInputIsNull)
